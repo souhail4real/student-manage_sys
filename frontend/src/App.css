@@ -1,0 +1,114 @@
+body {
+  background-color: #f8f9fa;
+  padding-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.table {
+  vertical-align: middle;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.invalid-feedback {
+  font-size: 80%;
+}
+
+
+/* App.css */
+
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  margin-top: 20px;
+}
+
+/* Card Header */
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Invalid form input */
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+/* Custom toast styles */
+.toast-custom {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.toast-custom p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.toast-custom .btn {
+  margin-right: 10px;
+}
+
+.toast-custom .btn:hover {
+  background-color: #45a049;
+}
+
+.toast-custom .btn-secondary:hover {
+  background-color: #e53935;
+}
