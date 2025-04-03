@@ -1,34 +1,285 @@
-/* Custom styles for the Ant Design implementation */
+/* Modern app styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
 
 .app-container {
   min-height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Content styles */
+.app-content {
+  padding: 24px;
   background-color: #f0f2f5;
+  min-height: calc(100vh - 64px);
 }
 
-/* Add some spacing for mobile views */
-@media (max-width: 768px) {
-  .ant-card {
-    width: 100% !important;
-    margin-bottom: 16px;
-  }
+/* Card styles */
+.form-card, .list-card, .stat-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 
+              0 3px 6px 0 rgba(0, 0, 0, 0.12), 
+              0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  transition: all 0.3s;
 }
 
-/* Make the form more appealing */
-.ant-form-item-label > label {
-  font-weight: 500;
+.form-card .ant-card-head,
+.list-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 20px;
 }
 
-/* Customize the table */
-.ant-table-thead > tr > th {
-  background-color: #f5f5f5;
+.form-card .ant-card-body,
+.list-card .ant-card-body {
+  padding: 20px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 16px;
+}
+
+.stat-card .ant-statistic-title {
+  font-size: 16px;
+  color: #8c8c8c;
+  margin-bottom: 12px;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 24px;
   font-weight: 600;
 }
 
-/* Style the buttons */
+.stats-row {
+  margin-bottom: 12px;
+}
+
+/* Form styles */
+.student-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: #262626;
+}
+
+.student-form .ant-input,
+.student-form .ant-picker,
+.student-form .ant-select-selector {
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.student-form .ant-input:focus,
+.student-form .ant-picker-focused,
+.student-form .ant-select-focused .ant-select-selector {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Table styles */
+.students-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.students-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+  padding: 16px;
+  color: #262626;
+}
+
+.students-table .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  transition: background 0.3s;
+}
+
+.students-table .ant-table-tbody > tr:hover > td {
+  background-color: #e6f7ff !important;
+}
+
+/* Subscription status styles */
+.subscription-paid.ant-switch-checked {
+  background-color: #52c41a;
+}
+
+.subscription-unpaid.ant-switch {
+  background-color: #faad14;
+}
+
+.subscription-unpaid.ant-switch:not(.ant-switch-checked) {
+  background-color: #ff4d4f;
+}
+
+/* Button styles */
+.ant-btn {
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
 .ant-btn-primary {
   background-color: #1890ff;
+  border-color: #1890ff;
 }
 
 .ant-btn-primary:hover {
   background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.edit-button {
+  color: #1890ff;
+  border-color: #1890ff;
+}
+
+.edit-button:hover {
+  color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* Empty table state */
+.empty-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+/* Tab styles */
+.ant-card-tabpane {
+  padding-top: 8px;
+}
+
+.ant-tabs-tab {
+  transition: all 0.3s;
+}
+
+.ant-tabs-tab:hover {
+  color: #1890ff;
+}
+
+.ant-tabs-tab-active {
+  font-weight: 500;
+}
+
+.ant-badge {
+  margin-left: 4px;
+}
+
+/* Select tag styles */
+.ant-select-selection-item .ant-tag {
+  margin-right: 0;
+  padding: 0 5px;
+}
+
+.ant-select-dropdown .ant-select-item-option-content .ant-tag {
+  margin-right: 0;
+  padding: 0 5px;
+}
+
+/* Class management styles */
+.class-list {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+.class-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.class-item:last-child {
+  border-bottom: none;
+}
+
+.class-info {
+  display: flex;
+  align-items: center;
+}
+
+.empty-classes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  gap: 8px;
+}
+
+/* Drawer styles */
+.ant-drawer-body {
+  padding: 24px;
+}
+
+.ant-drawer-header {
+  padding: 16px 24px;
+}
+
+.ant-drawer-title {
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .app-content {
+    padding: 16px;
+  }
+  
+  .stat-card {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-header {
+    padding: 0 16px;
+  }
+  
+  .user-info .ant-typography {
+    display: none;
+  }
+  
+  .ant-statistic-title {
+    font-size: 14px !important;
+  }
+  
+  .ant-statistic-content {
+    font-size: 20px !important;
+  }
+  
+  .ant-drawer-content-wrapper {
+    width: 300px !important;
+  }
 }
